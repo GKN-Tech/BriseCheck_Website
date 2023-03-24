@@ -1,0 +1,424 @@
+:root{
+    --dark-color:#551E19;
+    --light-color:#C56E33;
+}
+*{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+/* Background Animation Idea from Codepen */
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #551e19;
+    overflow: hidden;
+    z-index: -1;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+.background li:nth-child(0) {
+    left: 85%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 13%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 44%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 1s;
+}
+.background li:nth-child(3) {
+    left: 74%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 10s;
+}
+.background li:nth-child(4) {
+    left: 44%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 11s;
+}
+.background li:nth-child(5) {
+    left: 87%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 15s;
+}
+.background li:nth-child(6) {
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 8s;
+}
+.background li:nth-child(7) {
+    left: 15%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 28s;
+}
+.background li:nth-child(8) {
+    left: 0%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 36s;
+}
+.background li:nth-child(9) {
+    left: 81%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 33s;
+}
+.background li:nth-child(10) {
+    left: 9%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 1s;
+}
+.background li:nth-child(11) {
+    left: 32%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 52s;
+}
+.background li:nth-child(12) {
+    left: 44%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 54s;
+}
+.background li:nth-child(13) {
+    left: 11%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 52s;
+}
+.background li:nth-child(14) {
+    left: 51%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 37s;
+}
+.background li:nth-child(15) {
+    left: 60%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 40s;
+}
+.background li:nth-child(16) {
+    left: 49%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 46s;
+}
+.background li:nth-child(17) {
+    left: 25%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 64s;
+}
+.background li:nth-child(18) {
+    left: 27%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 44s;
+}
+.background li:nth-child(19) {
+    left: 54%;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    animation-delay: 32s;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+.d1{        /* Header Logo */
+    justify-self: flex-start;
+    align-self: center;
+}
+.d2{        /* Navigation Bar */
+    justify-self: flex-end;
+    align-self: center;
+}
+.logo{
+    width: 300px;
+    float: left;
+}
+body{
+    background-color: var(--dark-color);
+    font-family: 'Tilt Neon', 'Rubik', 'Laila', sans-serif;
+    font-size: large;
+    color:#FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor:default;
+    z-index: 1;
+}  
+header{
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+}
+nav a{
+    color:#FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 3px;
+    padding-right: 3px;
+    transition: font-size 1s ease-out 0;
+    transition: background-color 1s ease-out 0;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px 30px 5px 5px;
+}
+nav a:hover{
+    background-color: #C56E33;
+    font-size: larger;
+}
+.time{
+    font-size: small;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    align-content: flex-start;
+    padding-left: 3em;
+    overflow: hidden;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.download{
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #C56E33;
+    color:#FFFFFF;
+    padding: 5px;
+}
+.download:hover{
+    border: 2px solid dodgerblue;
+    background-color: #FFFFFF;
+    color:dodgerblue;
+}
+.download:active{
+    color: blue;
+}
+form{
+    margin-top: 2em;
+    overflow: hidden;
+}
+form div{
+    display: flex;
+    justify-content: center;
+}
+.label{
+    padding-left: 2em;
+    padding-right: 1em;
+}
+.dropdown{
+    background-color: var(--light-color);
+    color:#FFFFFF;
+    font-family: 'Rubik', 'Tilt Neon', 'Laila', sans-serif;
+    font-size: small;
+    width: 170px;
+}
+#submitbtn{
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: var(--light-color);
+    color:#FFFFFF;
+    font-family: 'Rubik', 'Tilt Neon', 'Laila', sans-serif;
+    font-size: 16px;
+}
+#submitbtn:hover{
+    border: 2px solid #C56E33;
+    background-color: #FFFFFF;
+    color: #C56E33;
+    font-weight: bolder;
+}
+#output{
+    display: block;
+}
+.data-p{
+    display: none;
+    font-size: bold;
+}
+.data-s{
+    display: none;
+    font-size: bold;
+}
+.rlmargins{
+    margin-right: 2em;
+    margin-left: 2em;
+}
+#playername{
+    margin: 5px 5px;
+    height: 25px;
+}
+
+/* ************NAME ANIMATION (Idea from Codepen)************ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+#name-ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.name-li {
+  list-style: none;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  z-index: 100;
+}
+
+.letter{
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: #18191f;
+  color: #555;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  cursor: pointer;
+  margin: 0 4px;
+  border-radius: 20px;
+  box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+    4px 4px 6px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="checkbox"]:checked ~ div {
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+    inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+  color: yellow;
+  text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+  animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* *****************NAME ANIMATION****************** */
+
+h3{
+    text-align: center;
+    margin-top: 20px;
+}
+h4{
+    text-align: center;
+    margin: 100px 30px;
+    font-weight: lighter;
+}
+p{
+    text-align: center;
+}
+.forms-game-about{
+    position: relative;
+    text-align: center;
+}
+#user-email{
+    border: 1px solid --light-color;
+    height: 30px;
+    width: 300px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
+#message{
+    border: 1px solid --light-color;
+    height: 150px;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+footer{
+    margin-top: auto;
+}
+
+@media only screen and (max-width: 600px){
+    header nav{
+        display: none;
+    }
+}

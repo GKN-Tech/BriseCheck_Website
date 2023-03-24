@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+
+<ul id="name-ul">
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">G</div>
+    </li>
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">U</div>
+    </li>
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">R</div>
+    </li>
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">K</div>
+    </li>
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">I</div>
+    </li>
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">R</div>
+    </li>
+    <li class="name-li">
+      <input type="checkbox" />
+      <div class="letter">A</div>
+    </li>
+    <li class="name-li">
+        <input type="checkbox" />
+        <div class="letter">T</div>
+      </li>
+  </ul>
+
+  <h3>Send feedback to the Developer!</h3>
+
+  <form action="/about" method="post" class="forms-game-about">
+    <input id="user-email" type="email" name="user-email" placeholder="Email" autocomplete="off"><br>
+    <input type="text" id="message" required name="message" placeholder="Enter your message here"><br><br>
+    <button id="submitbtn" type="submit">SEND</button><br>
+  </form>
+
+  <br>
+  <p>{{thank}}</p>
+
+{% endblock %}

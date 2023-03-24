@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Visualize{% endblock %}
+
+{% block body %}
+
+<p class="time">Last Updated: {{ t }}</p>
+<div class="rlmargins">
+    {% include "mapfile.html" %}
+</div>
+<br>
+<div class="rlmargins">
+    {% include "plotfile.html" %}
+</div>
+
+{% endblock %}

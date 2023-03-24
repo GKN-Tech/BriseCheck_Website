@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}BriseCheck{% endblock %}
+
+{% block body %}
+
+<p class="time">Last Updated: {{ t }}</p>
+
+<section>
+    <div class="center">
+      <h2>The current PM2.5 concentration in India is {{ overall }} µg/m³</h2>
+    </div>
+    <br>
+    <div class="center">
+        <a class="download" href="{{ url_for('static', filename='IndianAQI.csv') }}" download>
+            Download CSV File
+        </a>
+    </div>
+  </section>
+
+<form action="/" method="post">
+    <div>
+        <label class="label" for="instate">Filter with State:</label>
+        <select class="dropdown" id="instate" name="instate">
+            <option value="" selected disabled hidden>Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadra And Nagar Haveli">Dadra And Nagar Haveli</option>
+            <option value="Daman And Diu">Daman And Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu And Kashmir">Jammu And Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+        </select>
+        <label class="label" for="instatus">Filter with Status:</label>
+        <select class="dropdown" id="instatus" name="instatus">
+            <option value="" selected disabled hidden>Select Status</option>
+            <option value="UNHEALTHY">Unhealthy</option>
+            <option value="POOR">Poor</option>
+            <option value="MODERATE">Moderate</option>
+            <option value="GOOD">Good</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <button type="submit" id="submitbtn">SUBMIT</button>
+    </div>
+</form>
+<br>
+<br>
+<div id="output" class="rlmargins">
+    <p class="data-p">The index for {{ p }}:</p>
+    {{ output1 | safe }}
+    <br>
+    <p class="data-s">The index for states with {{ s }} Air Quality:</p>
+    {{ output2 | safe }}
+    <br>
+</div>
+
+{% endblock %}

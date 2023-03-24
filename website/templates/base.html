@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BASE{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Laila:wght@500&family=Rubik&family=Tilt+Neon&display=swap');
+    </style>
+<body>
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
+    <header>
+        <div class="container">
+            <div class="d1">
+                <a href="/"><img class="logo" src="{{ url_for('static', filename='images/header.png')}}" alt="BriseCheck Logo"></a>
+            </div>
+            <div class="d2">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">HOME</a>
+                        </li>
+                        <li>
+                            <a href="/viz">VISUALIZE</a>
+                        </li>
+                        <li>
+                            <a href="/game">ECO-GAME</a>
+                        </li>
+                        <li>
+                            <a href="/about">ABOUT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    {% block body %}{% endblock %}
+
+    <footer class="center">
+        <span>
+            &copy;Gurkirat Kaur <!--inline-->
+        </span>
+    </footer>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='file.js') }}">
+    </script>
+    
+</body>
+</html>

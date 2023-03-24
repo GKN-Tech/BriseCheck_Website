@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}EcoGame{% endblock %}
+
+{% block body %}
+
+<h3>Just take a minute to save a tree in Eco-Game!</h3>
+<form action="/game" method="post" class="forms-game-about">
+    <input type="text" required name="playername" id="playername" placeholder="Enter Your name" autocomplete="off">
+    <button type="submit" id="submitbtn">PLAY</button>
+</form>
+<h4>Let's take that same energy and passion and apply it to saving trees in the real world.<br>By taking action to plant and protect trees, we can create a healthier planet for ourselves and future generations.<br>Let's make a difference together!</h4>
+
+{% endblock %}
