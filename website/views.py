@@ -15,7 +15,7 @@ def crawler():
     
     website = "https://www.aqi.in/ca/dashboard/india#:~:text=The%20current%20PM2.,hrs%20air%20quality%20guidelines%20value."
 
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome()
     driver.get(website)
 
     # Output the overall PM2.5 concentration
