@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, request, make_response
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 
 import pandas as pd
 from datetime import datetime
@@ -15,7 +16,8 @@ def crawler():
     
     website = "https://www.aqi.in/ca/dashboard/india#:~:text=The%20current%20PM2.,hrs%20air%20quality%20guidelines%20value."
 
-    driver = webdriver.Chrome()
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
     driver.get(website)
 
     # Output the overall PM2.5 concentration
