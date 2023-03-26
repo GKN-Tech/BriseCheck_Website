@@ -31,7 +31,7 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-@pages.route('/about', methods = ['GET', 'POST'])
+@pages.route('/contact', methods = ['GET', 'POST'])
 def about():
     thank = ""
     if request.method == 'POST':
