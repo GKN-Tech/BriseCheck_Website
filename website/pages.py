@@ -40,7 +40,7 @@ def about():
         Message = request.form["message"]
         db.child("Message").push(Message)
         thank = "Thanks for your valuable feedback!"
-    return render_template("about.html", thank = thank)
+    return render_template("contact.html", thank = thank)
 
 
 
