@@ -32,7 +32,7 @@ config = {
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 @pages.route('/contact', methods = ['GET', 'POST'])
-def about():
+def contact():
     thank = ""
     if request.method == 'POST':
         Email = request.form["user-email"]
