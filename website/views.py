@@ -3,7 +3,6 @@ from flask import Blueprint, render_template, request, make_response
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 
@@ -21,8 +20,7 @@ def crawler():
     options = Options()
     options.add_argument('--headless')
 
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(options=options)
     driver.get(website)
 
     # Output the overall PM2.5 concentration
