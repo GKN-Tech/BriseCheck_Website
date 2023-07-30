@@ -28,6 +28,18 @@ The Flask, which is a python web framework and Jinja2 which is a python web temp
 **Limitation**  
 The Eco-Game icon has to be manually clicked by the player in taskbar for showing the window up on screen. 
 
+# Running on Localhost
+
+1. **Clone git repository**
+`git clone https://github.com/GKN-Tech/BriseCheck_Website.git`
+
+2. **Install requirements.txt using pip**
+`pip install -r requirements.txt`
+
+3. **Run main.py**
+
+4. **Browse http://localhost:5000 or http://127.0.0.1:5000**
+
 
 
  
